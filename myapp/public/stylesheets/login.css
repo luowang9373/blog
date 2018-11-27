@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+}
+.box{
+  width: 500px;
+  height: 200px;
+  margin: 40px auto;
+  border: 1px solid #f0f0f0;
+}
+.userName{
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+.passWord{
+  height: 30px;
+  display: flex;
+  line-height: 30px;
+  font-size: 14px;
+  margin: 0 auto;
+  justify-content: center;
+}
+#loginBtn{
+  display: block;
+  margin: 30px auto 0;
+  width: 60px;
+  height: 30px;
+  font-size: 14px;
+}

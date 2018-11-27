@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/editJournal.css')
+    script(type='text/javascript').
+      var articleData = !{JSON.stringify(data)}
+    script(type='text/javascript', src='/javascripts/axios.min.js')
+  body
+    h1= title
+    
+    div(class='title')= "标题"
+      input(id='articleTitle',value=data[0].title)
+    
+    div(class='abstract')= "简介"
+      input(id='articleAbstract',value=data[0].intro)
+    
+    div(id='editor')
+    
+    div(class='btnBox')  
+      button(id='btn')= '保存 '
+    
+    script(type='text/javascript', src='/javascripts/wangEditor.js')
+  
+    script(type='text/javascript', src='/javascripts/editJournal.js')

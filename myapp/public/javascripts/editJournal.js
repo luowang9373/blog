@@ -1,5 +1,5 @@
 var E = window.wangEditor;
-var editor = new E( document.getElementById('editor') );
+var editor = new E('#editor');
 // 自定义菜单配置
 editor.customConfig.menus = [
   'head',  // 标题
@@ -38,12 +38,8 @@ editor.customConfig.colors = [
 ]
 editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
 editor.create();
-document.getElementById('btn1').addEventListener('click', function () {
+editor.txt.html(articleData[0].details)
+document.getElementById('btn').addEventListener('click', function () {
     // 读取 html
     alert(editor.txt.html())
 }, false)
-
-//document.getElementById('btn2').addEventListener('click', function () {
-//  // 读取 text
-//  alert(editor.txt.text())
-//}, false)

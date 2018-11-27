@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/adminIndex.css')
+    script(type='text/javascript', src='/javascripts/axios.min.js')
+    script(type='text/javascript', src='/javascripts/adminIndex.js')
+  body
+    div(class='top')
+      div(class='slogan')= "欢迎你，admin"
+      div(id='exit')= "退出账号"
+      
+    div(class='content')
+      ul(class='box')
+        li(class='list')
+          div(class='listId')= "id"
+          div(class='listTitle')= "标题"
+          div(class='listOperation')= "操作"
+        each val,index in data
+          li(class='list')
+            div(class='listId')= val.id
+            div(class='listTitle')= val.title
+            div(class='listOperation')
+              div(class='listAmend',onclick='amendArticle(this)',data-id=val.id)= "修改"
+              div(class='listDelete',onclick='deleteArticle(this)',data-id=val.id)= "删除"
+  
+    div(class='pagination')
+      div(id='previousPage')= "上一页"
+      div(id='currentPage')= "1"
+      div(id='nextPage')= "下一页"
+      input(id='inputPage')
+      div(id='confirm')= "确定"
+      div(id='addTitle')= "新增文章"
+    

@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-width: 1200px;
+}
+.top{
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  line-height: 50px;
+}
+.slogan{
+  flex: 1;
+  font-size: 12px;
+  text-align: right;
+  color: #999;
+  padding-right: 20px;
+}
+#exit{
+  width: 80px;
+  font-size: 14px;
+  color: #FAEBD7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#exit:hover{
+  color: #00B7FF;
+}
+ul,li{
+  list-style: none;
+}
+.pagination{
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 60px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.pagination input{
+  display: block;
+  width: 40px;
+  height: 28px;
+  text-align: center;
+  margin-right: 10px;
+}
+#confirm{
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  line-height: 30px;
+  background-color: #92ccec;
+  color: #00B7FF;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#confirm:hover{
+  background-color: #74afd0;
+  color: #fff;
+}
+#previousPage{
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  line-height: 30px;
+  background-color: #92ccec;
+  color: #00B7FF;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#previousPage:hover{
+  background-color: #74afd0;
+  color: #fff;
+}
+#nextPage{
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  line-height: 30px;
+  background-color: #92ccec;
+  color: #00B7FF;
+  border-radius: 6px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+#nextPage:hover{
+  background-color: #74afd0;
+  color: #fff;
+}
+#currentPage{
+  width: 60px;
+  text-align: center;
+  color: #999999;
+  margin-left: 10px;
+}
+.content{
+  width: 1200px;
+  margin: 20px auto;
+}
+.box{
+  border-bottom: 1px solid #e0e0e0;
+}
+.list{
+  height: 30px;
+  display: flex;
+  line-height: 30px;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+}
+.listId{
+  width: 50px;
+  text-align: center;
+}
+.listTitle{
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+.listOperation{
+  width: 120px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+}
+.listAmend{
+  height: 24px;
+  line-height: 24px;
+  width: 46px;
+  border: 1px solid #f0f0f0;
+  background-color: #e0e0e0;
+  color: #999;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.listDelete{
+  height: 24px;
+  line-height: 24px;
+  width: 46px;
+  margin-left: 10px;
+  border: 1px solid #f0f0f0;
+  background-color: #e0e0e0;
+  color: #999;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.listAmend:hover,.listDelete:hover{
+  color: #666;
+}
+#addTitle{
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  line-height: 30px;
+  background-color: #92ccec;
+  color: #00B7FF;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+#addTitle:hover{
+  background-color: #74afd0;
+  color: #fff;
+}

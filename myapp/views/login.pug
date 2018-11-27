@@ -1,12 +1,18 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
-  
-
-  
-
-  script(type='text/javascript', src='/javascripts/axios.min.js')
-  
-  script(type='text/javascript', src='/javascripts/login.js')
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    script(type='text/javascript', src='/javascripts/axios.min.js')
+    script(type='text/javascript', src='/javascripts/login.js')
+  body
+    h1= title
+    div(class='box')
+      div(class='userName')
+        text= '账号：'
+        input(id='userNameInput')
+      div(class='passWord')
+        text= '密码：'
+        input(id='passWordInput', type='password')
+      button(id='loginBtn')= '登录'
+    

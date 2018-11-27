@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 1000px;
+  margin: 20px auto;
+}
+h1{
+  width: 1000px;
+  margin: 20px auto;
+}
+#editor{
+  width: 1000px;
+  margin: 20px auto;
+}
+.w-e-text-container{
+  height: 600px !important;
+}
+.btnBox{
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: flex-end;
+}
+#btn{
+  height: 40px;
+  line-height: 40px;
+  width: 90px;
+  text-align: center;
+  display: block;
+}
+.title,.abstract{
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  align-items: center;
+}
+.title input,.abstract input{
+  height: 28px;
+  line-height: 28px;
+  display: block;
+  margin-left: 20px;
+  min-width: 400px;
+}
