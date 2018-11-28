@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title= data[0].title
+    link(rel='stylesheet', href='/stylesheets/journal.css')
+  body
+    div(class='top')
+      div(class='time')= data[0].time
+    h3= data[0].title
+    div(class='centent') !{data[0].details}
+    

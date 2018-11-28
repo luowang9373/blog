@@ -13,12 +13,12 @@ html
     div(class='content')
       ul(class='box')
         li(class='list')
-          div(class='listId')= "id"
+          div(class='listId')= "序号"
           div(class='listTitle')= "标题"
           div(class='listOperation')= "操作"
         each val,index in data
           li(class='list')
-            div(class='listId')= val.id
+            div(class='listId')= index
             div(class='listTitle')= val.title
             div(class='listOperation')
               div(class='listAmend',onclick='amendArticle(this)',data-id=val.id)= "修改"

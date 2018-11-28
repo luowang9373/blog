@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.time{
+  color: #999;
+}
+.top{
+  height: 150px;
+  background-color: #00B7FF;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+h3{
+  width: 1200px;
+  margin: 0 auto;
+  color: #74AFD0;
+  height: 60px;
+  line-height: 60px;
+  font-weight: normal;
+  text-align: center;
+}
+.centent{
+  width: 1200px;
+  margin: 20px auto 0;
+}

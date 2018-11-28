@@ -1,13 +1,35 @@
 const express = require('express');
 const router = express.Router();
 const db = require('./dataBase');
+
+Date.prototype.Format = function(fmt){  
+  var o = {   
+    "M+" : this.getMonth()+1,                 //月份   
+    "d+" : this.getDate(),                    //日   
+    "h+" : this.getHours(),                   //小时   
+    "m+" : this.getMinutes(),                 //分   
+    "s+" : this.getSeconds(),                 //秒   
+    "q+" : Math.floor((this.getMonth()+3)/3), //季度   
+    "S"  : this.getMilliseconds()             //毫秒   
+  };   
+  if(/(y+)/.test(fmt))   
+    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));   
+  for(var k in o)   
+    if(new RegExp("("+ k +")").test(fmt))   
+  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
+  return fmt;   
+}  
 /**
  * 博客首页
  * 功能
  * 日志分页
  */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '首页' });
+  //查询所有日志列表
+  let sql = 'SELECT * FROM article order by time desc';
+  db.query(sql,[req.session.userName]).then((data)=>{
+    res.render('index', { title: '首页' ,data: data});
+  })
 });
 /**
  * 日志详情
@@ -17,7 +39,12 @@ router.get('/', function(req, res, next) {
  * 下一篇
  */
 router.get('/journal', function(req, res, next) {
-  res.render('journal', { title: '日志详情' });
+  //根据日志id查询日志信息
+  let sql = 'SELECT * FROM article WHERE id = ?';
+  db.query(sql,[req.query.id]).then((data)=>{
+    data[0].time =  new Date(data[0].time).Format("yyyy-MM-dd"); 
+    res.render('journal', {data: data});
+  })
 });
 
 /*---------------------------------------------------------------------管理员---------------------------------------------------------*/
@@ -43,7 +70,7 @@ router.get('/admin/*', function(req, res, next) {
  * 日志分页
  */
 router.get('/admin/index', function(req, res, next) {
-  let sql = 'SELECT * FROM article WHERE userid = ?';
+  let sql = 'SELECT * FROM article WHERE userid = ? order by time desc';
   db.query(sql,[req.session.userName]).then((data)=>{
     res.render('adminIndex', { title: '后台管理' ,data: data});
   })

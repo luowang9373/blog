@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/index.css')
+  body
+    div(class='top')
+    div(class='centent')
+      ul(class='box')
+        each val,index in data
+          li(class='list')
+            a(href='/journal?id=' + val.id)
+              h3= index + '.' + val.title
+              p= val.intro
+          
+      
+ 
+  
+    

@@ -35,9 +35,10 @@ ul,li{
   display: flex;
   height: 50px;
   line-height: 50px;
-  padding-right: 60px;
   justify-content: flex-end;
   align-items: center;
+  width: 1200px;
+  margin: 0 auto;
 }
 .pagination input{
   display: block;
